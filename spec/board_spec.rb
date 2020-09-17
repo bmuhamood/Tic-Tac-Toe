@@ -21,4 +21,13 @@ describe Board do
         expect(board.move(2, 2, 'X')).to eql(board.winner)
       end
     end
+
+    describe '#check_winner' do
+        it 'checks if there is a winner in row' do
+        board = Board.new
+        board.move(0, 0, 'X')
+        board.move(0, 1, 'X')
+        expect(board.check_winner(0, 2, 'X')).not_to eql(true)
+        end
+    end
 end
