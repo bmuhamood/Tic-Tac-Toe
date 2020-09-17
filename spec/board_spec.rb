@@ -10,4 +10,15 @@ describe Board do
             expect(board.current_board).to eql("\n   |   |   \n----------- \n   |   |   \n----------- \n   |   |   \n")
         end
     end
+
+    describe '#move' do
+      it 'returns if there is a winner after the fourth move' do
+        board = Board.new
+        board.move(0, 0, 'X')
+        board.move(0, 2, 'O')
+        board.move(1, 1, 'X')
+        board.move(1, 2, 'O')
+        expect(board.move(2, 2, 'X')).to eql(board.winner)
+      end
+    end
 end
