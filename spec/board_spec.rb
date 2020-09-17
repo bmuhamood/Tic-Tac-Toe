@@ -50,5 +50,18 @@ describe Board do
             board.move(1, 1, 'X')
             expect(board.check_winner(2, 0, 'X')).not_to eql(true)
           end
+
+          it 'checks if there is a draw' do
+            board = Board.new
+            board.move(0, 0, 'X')
+            board.move(0, 1, 'O')
+            board.move(0, 2, 'X')
+            board.move(1, 0, 'O')
+            board.move(1, 1, 'X')
+            board.move(1, 2, 'O')
+            board.move(2, 0, 'X')
+            board.move(2, 1, 'O')
+            expect(board.check_winner(2, 2, 'X')).not_to eql(true)
+          end
     end
 end
