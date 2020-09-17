@@ -64,4 +64,19 @@ describe Board do
             expect(board.check_winner(2, 2, 'X')).not_to eql(true)
           end
     end
+
+    describe '#empty_position?' do
+      it 'returns true if position is empty'
+        board = Board.new
+        board.move(0, 0, '')
+        expect(board.empty_position?(0, 0)).to eql(true)
+      end
+
+      it 'returns false if position is taken'
+        board = Board.new
+        board.move(1, 1, 'X')
+        expect(board.empty_position?(1, 1)).to eql(false)
+      end
+    end
 end
+
