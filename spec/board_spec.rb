@@ -36,5 +36,12 @@ describe Board do
           board.move(1, 0, 'X')
           expect(board.check_winner(2, 0, 'X')).not_to eql(true)
         end
+
+        it 'checks if there is a winner in diagonal from left to right' do
+            board = Board.new
+            board.move(0, 0, 'X')
+            board.move(1, 1, 'X')
+            expect(board.check_winner(2, 2, 'X')).not_to eql(true)
+          end
     end
 end
