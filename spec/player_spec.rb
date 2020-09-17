@@ -11,7 +11,7 @@ describe Player do
     end
  
     it 'return false if position is taken' do
-      player = Player.new('John', 'O')
+      player = Player.new('John', 'Or')
       board = Board.new
       player.make_move(1, board)
       expect(player.check_position?(1, board)).to eql(false)
