@@ -7,12 +7,12 @@ describe Player do
   let(:player1) { Player.new('Yanick', 'X') }
   let(:player2) { Player.new('John', 'O') }
   let(:board) { Board.new }
-  
+
   describe '#check_position?' do
     it 'return true if position is empty.' do
       expect(player1.check_position?(5, Board.new)).to eql(true)
     end
- 
+
     it 'return false if position is taken' do
       player1.make_move(1, board)
       expect(player2.check_position?(1, board)).to eql(false)
