@@ -42,6 +42,21 @@ To get a local copy up and running follow these simple example steps.
 ## Run the game 
 Type ```bin/main.rb``` in the root file of the project. You can also type ```ruby bin/main.rb``` in the root file of the project.
 
+## Running tests with Rspec
+
+This game was tested with Rspec wich is a computer domain-specific language (DSL) testing tool written in programming language Ruby to test Ruby code. It is a behavior-driven development (BDD) framework which is extensively used in production applications.
+
+## How to get Rspec running
+
+- In the terminal, type `gem install rspec`
+- Once done, go to project directory and type `rspec --init`
+- You will see a folder `spec` and a file `.rspec`
+- Inside spec folder you'll see a `spec_helper.rb` file.
+- In the terminal, type `rspec`
+
+## Rspec output
+![screenshot 6](./screens/6.png)
+
 ## ✒️ Authors
 
 👤 **Cecilia Benitez**
@@ -53,6 +68,11 @@ Type ```bin/main.rb``` in the root file of the project. You can also type ```rub
 
 - Github: [@jelduran](https://github.com/jelduran)
 - LinkedIn:[LinkedIn](www.linkedin.com/in/jelduran)
+
+👤 **Tazoh Yanick**
+
+- 👤GitHub: [Tazoh Yanick](https://github.com/t-yanick)
+- Linkedin: [Tazoh Yanick](https://linkedin.com/in/tazoh-yanick-5a978764)
 
 ## 🤝 Contributing
 
