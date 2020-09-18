@@ -1,6 +1,5 @@
 # spec/board_spec.rb
 
-require './lib/player'
 require './lib/board'
 
 describe Board do
